@@ -1,78 +1,50 @@
-# SNOOPY PetShop API
-Situação de Aprendizagem - Back-End (Node.JS, JavaSript, VsCode, ORM Prisma, Insomnia)
-## Contextualização
-SNOOPY PetShop tem atuado em nossa cidade com ótimo atendimento e agilidade, é nosso cliente e necessita de um sistema Web para registro dos seus pedidos no balcão.<br>O P.O. após uma visita ao cliente elaborou o DER e UML DC(Diagrama de Classes) a seguir e elencou os requisitos funcionais.<br>
-![DER e DC](./docs/snoopy-der-dc.png)
-## Desafio
-Desenvolver as funcionalidades conforme requisitos
+```markdown
+# SNOOPY PetShop API - Situação de Aprendizagem - Back-End
 
-### Requisitos funcionais
-- [RF001] O sistema deve permitir o CRUD de Clientes.
-    - [RF001.1] O sistema deve permitir o CRUD de telefones, pois cada cliente pode possuir 0 ou vários telefones de tipos diferentes como celular, fixo ou comercial.
-    - [RF001.2] A rota **read** do cliente deve mostrar os dados de todos os clientes e seus respectivos telefones.
-    - [RF001.3] A rota **readOne** do cliente deve mostrar os dados de um cliente específico, seus telefones e seus pedidos.
-- [RF002] O sistema deve permitir o CRUD de pedidos.
-    - [RF002.1] O sistema deve associar o pedido a um cliente.
-    - [RF002.2] Ao cadastrar um novo pedido **create** no controller sistema calcular o subTotal multiplicando o preco pela quantidade.
-
-### Casos de teste (Insomnia)
-- [CT001] Deve ser cadastrado pelo menos 5 clientes.
-- [CT002] Deve ser cadastrado ao menos 1 telefone para cada cliente.
-    - [CT002.1] Pelo menos dois clientes devem ter dois ou mais telefones cadastrados.
-- [CT003] Cadastre, altere e exclua um cliente.
-- [CT004] Cadastre um pedido para cada cliente.
-    - [CT004.1] Pelo menos um cliente deve ter dois ou mais pedidos cadastrados.
-- [CT005] Cadastre, altere e exclua um pedido.
-
-## Tecnologias
-
-- **Node.js**: JavaScript para a construção do servidor da API.
-- **Express.js**: Framework web para Node.js, usado para construir a API.
-- **Prisma ORM**: Ferramenta de mapeamento (ORM) para facilitar a interação com o banco de dados.
-- **MySQL**: Sistema de gerenciamento de banco de dados utilizado para armazenar os dados.
-- **Insomnia**: Ferramenta para testar as rotas da API.
-
-
-## Passo a Passo de como executar a API
-Aqui está o conteúdo completo para você copiar e colar diretamente no arquivo `README.md`:
-
-```md
-# SNOOPY PetShop API
-Situação de Aprendizagem - Back-End (Node.JS, JavaSript, VsCode, ORM Prisma, Insomnia)
+Esta API foi desenvolvida como parte de um desafio de aprendizagem, com foco em atender as necessidades do SNOOPY PetShop, um cliente que exige um sistema Web para registro de pedidos no balcão.
 
 ## Contextualização
-SNOOPY PetShop tem atuado em nossa cidade com ótimo atendimento e agilidade, é nosso cliente e necessita de um sistema Web para registro dos seus pedidos no balcão.<br>O P.O. após uma visita ao cliente elaborou o DER e UML DC(Diagrama de Classes) a seguir e elencou os requisitos funcionais.<br>
+
+SNOOPY PetShop é uma empresa que atua em nossa cidade com ótimo atendimento e agilidade. O cliente necessita de um sistema para registrar seus pedidos no balcão, e o Product Owner (P.O.) elaborou o Diagrama Entidade-Relacionamento (DER) e o Diagrama de Classes (UML DC) a seguir, além de definir os requisitos funcionais.
+
 ![DER e DC](./docs/snoopy-der-dc.png)
 
 ## Desafio
-Desenvolver as funcionalidades conforme requisitos
 
-### Requisitos funcionais
-- [RF001] O sistema deve permitir o CRUD de Clientes.
-    - [RF001.1] O sistema deve permitir o CRUD de telefones, pois cada cliente pode possuir 0 ou vários telefones de tipos diferentes como celular, fixo ou comercial.
-    - [RF001.2] A rota **read** do cliente deve mostrar os dados de todos os clientes e seus respectivos telefones.
-    - [RF001.3] A rota **readOne** do cliente deve mostrar os dados de um cliente específico, seus telefones e seus pedidos.
-- [RF002] O sistema deve permitir o CRUD de pedidos.
-    - [RF002.1] O sistema deve associar o pedido a um cliente.
-    - [RF002.2] Ao cadastrar um novo pedido **create** no controller sistema calcular o subTotal multiplicando o preço pela quantidade.
+O desafio é desenvolver as funcionalidades conforme os requisitos especificados abaixo:
 
-### Casos de teste (Insomnia)
-- [CT001] Deve ser cadastrado pelo menos 5 clientes.
-- [CT002] Deve ser cadastrado ao menos 1 telefone para cada cliente.
-    - [CT002.1] Pelo menos dois clientes devem ter dois ou mais telefones cadastrados.
-- [CT003] Cadastre, altere e exclua um cliente.
-- [CT004] Cadastre um pedido para cada cliente.
-    - [CT004.1] Pelo menos um cliente deve ter dois ou mais pedidos cadastrados.
-- [CT005] Cadastre, altere e exclua um pedido.
+### Requisitos Funcionais
+
+- **[RF001] CRUD de Clientes**  
+  O sistema deve permitir o CRUD (Criar, Ler, Atualizar, Deletar) de clientes.
+  - **[RF001.1]** O sistema deve permitir o CRUD de telefones, pois cada cliente pode ter 0 ou mais telefones de tipos diferentes (celular, fixo, comercial).
+  - **[RF001.2]** A rota **read** do cliente deve exibir os dados de todos os clientes, incluindo seus respectivos telefones.
+  - **[RF001.3]** A rota **readOne** deve exibir os dados de um cliente específico, incluindo seus telefones e pedidos.
+
+- **[RF002] CRUD de Pedidos**  
+  O sistema deve permitir o CRUD de pedidos.
+  - **[RF002.1]** O sistema deve associar um pedido a um cliente.
+  - **[RF002.2]** Ao cadastrar um novo pedido, a rota **create** no controller deve calcular o subTotal multiplicando o preço pela quantidade.
+
+### Casos de Teste (Insomnia)
+
+- **[CT001]** Deve ser cadastrado pelo menos 5 clientes.
+- **[CT002]** Deve ser cadastrado ao menos 1 telefone para cada cliente.
+  - **[CT002.1]** Pelo menos dois clientes devem ter dois ou mais telefones cadastrados.
+- **[CT003]** Cadastre, altere e exclua um cliente.
+- **[CT004]** Cadastre um pedido para cada cliente.
+  - **[CT004.1]** Pelo menos um cliente deve ter dois ou mais pedidos cadastrados.
+- **[CT005]** Cadastre, altere e exclua um pedido.
 
 ## Tecnologias
+
 - **Node.js**: Ambiente de execução JavaScript no servidor.
 - **Express.js**: Framework para criação de APIs RESTful.
 - **Prisma**: ORM para facilitar a interação com o banco de dados.
 - **MySQL**: Banco de dados utilizado para armazenar informações.
 - **Insomnia**: Ferramenta para testar as rotas da API.
 
-## Passo a Passo de como executar a API
+## Passo a Passo para Executar a API
 
 ### 1. Clonar o Repositório
 
@@ -82,88 +54,71 @@ Primeiro, faça o clone do repositório para o seu ambiente local. Você pode us
 git clone https://github.com/usuario/snoopy-petshop-api.git
 ```
 
-Substitua `usuario` pela URL do repositório correto, se necessário.
+### 2. Instalar as Dependências
 
-### 2. Acesse o Diretório do Projeto
-
-Depois de clonar o repositório, acesse o diretório onde o projeto foi clonado:
+Após clonar o repositório, entre na pasta do projeto e instale as dependências:
 
 ```bash
 cd snoopy-petshop-api
-```
-
-### 3. Instalar as Dependências
-
-Instale todas as dependências do projeto usando o NPM. No diretório do projeto, execute o comando:
-
-```bash
 npm install
 ```
 
-Esse comando vai instalar todas as dependências necessárias para rodar a API, como o **Express.js** e o **Prisma ORM**, entre outros.
+### 3. Configurar o Banco de Dados
 
-### 4. Configuração do Banco de Dados
+1. Certifique-se de ter o MySQL instalado e em execução no seu computador.
+2. Crie um banco de dados chamado `snoopy_petshop`.
+3. Configure as credenciais de conexão do banco de dados no arquivo `.env` (exemplo abaixo):
 
-#### 4.1. Criar Banco de Dados no MySQL
-
-Certifique-se de que o **MySQL** está instalado e em execução. Em seguida, crie um banco de dados para o projeto. Abra o MySQL e execute o seguinte comando:
-
-```sql
-CREATE DATABASE petshop;
+```env
+DATABASE_URL="mysql://username:password@localhost:3306/snoopy_petshop"
 ```
 
-#### 4.2. Configuração do arquivo `.env`
+### 4. Executar as Migrations
 
-No diretório raiz do projeto, crie um arquivo chamado `.env` e adicione a string de conexão para o banco de dados MySQL. Aqui está um exemplo:
-
-```ini
-DATABASE_URL="mysql://root:senha@localhost:3306/petshop"
-```
-
-- **root**: Usuário do MySQL.
-- **senha**: Senha do seu usuário no MySQL.
-- **localhost**: Endereço do banco de dados (geralmente `localhost` se o MySQL estiver rodando localmente).
-- **petshop**: O nome do banco de dados que você criou no MySQL.
-
-#### 4.3. Executar as Migrações
-
-Para criar as tabelas no banco de dados, execute as migrações do Prisma com o seguinte comando:
+Para criar as tabelas no banco de dados, execute as migrations com o Prisma:
 
 ```bash
 npx prisma migrate dev
 ```
 
-Esse comando irá criar as tabelas no banco de dados conforme o modelo do Prisma.
+### 5. Iniciar a API
 
-### 5. Rodar a API
-
-Agora, você pode rodar a API. No terminal, execute o comando:
+Agora você pode iniciar a API localmente:
 
 ```bash
 npm start
 ```
 
-A API estará rodando na porta 3000 por padrão, e você pode acessá-la através de `http://localhost:3001`.
+A API estará rodando na URL `http://localhost:3000`.
 
-### 6. Testar a API com Insomnia
+### 6. Testar as Rotas com o Insomnia
 
-Abra o **Insomnia** (ou qualquer outro cliente HTTP) e adicione as rotas conforme os casos de teste. Aqui estão algumas sugestões de rotas:
+Use o Insomnia para testar as rotas da API. Os endpoints principais são:
 
-- **POST /clientes**: Criar um novo cliente.
-- **GET /clientes**: Listar todos os clientes.
-- **GET /clientes/{id}**: Obter informações de um cliente específico.
-- **PATCH /clientes/{id}**: Atualizar um cliente específico.
-- **DELETE /clientes/{id}**: Excluir um cliente específico.
-- **POST /pedidos**: Criar um novo pedido.
-- **GET /pedidos**: Listar todos os pedidos.
-- **GET /pedidos/{id}**: Obter informações de um pedido específico.
-- **PATCH /pedidos/{id}**: Atualizar um pedido específico.
-- **DELETE /pedidos/{id}**: Excluir um pedido específico.
+- **GET /clientes** - Lista todos os clientes.
+- **GET /clientes/{id}** - Detalha um cliente específico.  
+  - **readOne**: Esta rota retorna todos os dados de um cliente específico, incluindo seus telefones e pedidos associados.
+- **POST /clientes** - Cria um novo cliente.
+- **PUT /clientes/{id}** - Atualiza um cliente existente.
+- **DELETE /clientes/{id}** - Exclui um cliente.
 
-### 7. Conclusão
+- **GET /pedidos** - Lista todos os pedidos.
+- **POST /pedidos** - Cria um novo pedido.
+- **PUT /pedidos/{id}** - Atualiza um pedido existente.
+- **DELETE /pedidos/{id}** - Exclui um pedido.
 
-Agora, você tem a API rodando localmente e pronta para ser testada com as ferramentas mencionadas, como **Insomnia**. Caso queira rodar o projeto em um ambiente de produção, será necessário realizar algumas configurações adicionais, como a hospedagem da API e a configuração do banco de dados em produção.
+## Contribuições
 
+Contribuições são bem-vindas! Se você encontrou algum problema ou tem sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```
+
+Agora, a rota **readOne** foi devidamente explicada na seção de **Testar as Rotas com o Insomnia**. Ela detalha que essa rota retorna os dados de um cliente específico, incluindo seus telefones e pedidos associados. 
+
+Se precisar de mais alguma coisa, estou à disposição!
 
  ### 8. A Print do Insomnia:
 
