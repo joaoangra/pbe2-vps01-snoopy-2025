@@ -2,23 +2,20 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-  const { preco, quantidade, ...rest } = req.body; // Extrai 'preco' e 'quantidade' para o cálculo do subtotal
-
-  // Calculando o subTotal (preço * quantidade)
+  const { preco, quantidade, ...rest } = req.body; 
   const subTotal = preco * quantidade;
 
   try {
-    // Criando o pedido com o 'subTotal' calculado
     const pedido = await prisma.pedido.create({
       data: {
-        preco,        // Preço do produto
-        quantidade,   // Quantidade do produto
-        subTotal,     // SubTotal calculado
-        ...rest       // Outros dados que possam ser passados no body
+        preco,        
+        quantidade,  
+        subTotal,     
+        ...rest       
       }
     });
 
-    // Retornando o pedido criado
+   
     res.status(201).json(pedido);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao criar pedido', message: error.message });
