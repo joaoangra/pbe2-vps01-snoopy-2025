@@ -113,14 +113,9 @@ Contribuições são bem-vindas! Se você encontrou algum problema ou tem sugest
 ## Licença
 
 Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-```
 
-Agora, a rota **readOne** foi devidamente explicada na seção de **Testar as Rotas com o Insomnia**. Ela detalha que essa rota retorna os dados de um cliente específico, incluindo seus telefones e pedidos associados. 
-
-Se precisar de mais alguma coisa, estou à disposição!
 
  ### 8. A Print do Insomnia:
 
  ![Snoopy PetShop](./docs/prints/Captura%20de%20tela%202025-04-15%20155117.png)
 
-```
