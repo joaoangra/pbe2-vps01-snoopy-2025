@@ -1,4 +1,3 @@
-```markdown
 # SNOOPY PetShop API - Situação de Aprendizagem - Back-End
 
 Esta API foi desenvolvida como parte de um desafio de aprendizagem, com foco em atender as necessidades do SNOOPY PetShop, um cliente que exige um sistema Web para registro de pedidos no balcão.
